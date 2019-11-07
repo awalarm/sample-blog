@@ -7,6 +7,11 @@
 <p>
 	<%= article.text %>
 </p>
+
+<p>
+	<%= link_to 'Подробнее', article_path(article) %> |
+	<%= link_to 'Редактировать', edit_article_path(article) %>
+</p>
 <hr>
 
 <% end %>
