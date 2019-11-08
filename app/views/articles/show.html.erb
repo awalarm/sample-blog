@@ -1,7 +1,19 @@
 <h1><%= @article.title %></h1>
 <p>
 	<%= @article.text %>
+	<hr>
 </p>
+
+<% @article.comments.each do |comment| %>
+	
+	<h3><%= comment.author  %></h3>
+
+	<p>
+		<%= comment.body %>
+	</p>
+	<hr>
+<% end %>
+
 <p>
 	<%= form_for ([@article, @article.comments.build]) do |f| %>
 	<p>
