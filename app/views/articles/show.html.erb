@@ -2,3 +2,20 @@
 <p>
 	<%= @article.text %>
 </p>
+<p>
+	<%= form_for ([@article, @article.comments.build]) do |f| %>
+	<p>
+		<%= f.label 'Имя' %><br>
+		<%= f.text_field :author %>
+	</p>
+
+	<p>
+		<%= f.label 'Введите комментарий' %><br>
+		<%= f.text_area :body %>
+	</p>
+
+	<p>
+		<%= f.submit 'Отправить' %>
+	</p>
+<% end %>
+</p>
