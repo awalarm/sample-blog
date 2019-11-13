@@ -17,7 +17,7 @@
 <p>
 	<%= form_for ([@article, @article.comments.build]) do |f| %>
 	<p>
-		<%= f.label 'Имя' %><br>
+		<%= f.label current_user.username %><br>
 		<%= f.text_field :author %>
 	</p>
 
